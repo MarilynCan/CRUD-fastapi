@@ -11,11 +11,11 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-origins = [
-    "https://www.google.com"
-]
+# origins = [
+#     "https://www.google.com"
+# ]
 
-# origins = ["*"] All
+origins = ["*"]
 
 
 app.add_middleware(
