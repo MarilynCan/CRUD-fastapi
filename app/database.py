@@ -21,7 +21,7 @@ def get_session():
         yield session
 
 def create_db_and_tables():
-    SQLModel.metadata.create_all(engine)
+    SQLModel.metadata.create_all(engine, checkfirst=True)
 
 
 SessionDep = Annotated[Session, Depends(get_session)]
